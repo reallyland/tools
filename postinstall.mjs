@@ -25,7 +25,7 @@ if (CI !== 'true') {
      */
     await $`npm i --no-save simple-git-hooks`
     await $`rm -rf .git/hooks`
-    await $`sh ./node_modules/simple-git-hooks.sh`;
+    await $`sh ./simple-git-hooks.sh`;
 
     await $`npm dedupe`;
   }
