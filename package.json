@@ -32,9 +32,10 @@
     ".github/**/*.yml",
     ".gitignore",
     ".npmrc",
-    "**/*.eslintrc.json",
+    "**/*.commitlintrc.json",
     "**/*.d.ts.map",
     "**/*.d.ts",
+    "**/*.eslintrc.json",
     "**/*.js.map",
     "**/*.js",
     "**/*.sh",
@@ -52,12 +53,14 @@
     "pre-commit": "npm run pre-commit",
     "commit-msg": "npm run lint-commit"
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
+  "engines": {
+    "node": ">= 16.x",
+    "npm": ">= 8.x"
   },
-  "devDependencies": {
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
     "@commitlint/config-conventional": "^16.2.1",
     "@reallyland/tsconfig": "^4.0.1",
     "@skypack/package-check": "^0.2.2",
@@ -67,12 +70,5 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-regexp": "^1.6.0",
     "eslint-plugin-simple-import-sort": "^7.0.0"
-  },
-  "engines": {
-    "node": ">= 16.x",
-    "npm": ">= 8.x"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
