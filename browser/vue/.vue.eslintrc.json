@@ -3,7 +3,7 @@
     "vue/setup-compiler-macros": true
   },
   "extends": [
-    "./.browser.eslintrc.json",
+    "../.browser.eslintrc.json",
     "@vue/typescript/recommended",
     "plugin:vue/base",
     "plugin:vue/vue3-essential"

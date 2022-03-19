@@ -4,6 +4,6 @@
     "serviceworker": true
   },
   "extends": [
-    "./.eslintrc.json"
+    "../.eslintrc.json"
   ]
 }
