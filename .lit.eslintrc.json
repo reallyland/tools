@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "./.browser.eslintrc.json",
+    "plugin:lit/recommended",
+    "plugin:lit-a11y/recommended"
+  ]
+}

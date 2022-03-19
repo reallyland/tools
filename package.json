@@ -1,0 +1,71 @@
+{
+  "name": "@reallyland/tools",
+  "version": "0.0.0",
+  "description": "A collection of opinionated tools for the Reallyland projects",
+  "keywords": [
+    "really",
+    "reallyland",
+    "shell",
+    "tool",
+    "tools"
+  ],
+  "homepage": "https://github.com/reallyland/tools",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:reallyland/tools.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Rong Sen Ng (motss)",
+    "email": "wes.ngrongsen@gmail.com",
+    "url": "https://github.com/motss"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "files": [
+    "**/*.d.ts.map",
+    "**/*.d.ts",
+    "**/*.js.map",
+    "**/*.js",
+    "**/*.sh",
+    "!**/*demo*/**/*.*",
+    "!**/*test*/**/*.*"
+  ],
+  "scripts": {
+    "postinstall": "sh postinstall.sh",
+    "lint-commit": "npm x -y -- commitlint@latest --edit",
+    "pre-commit": "package-check && tsc --noEmit"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run pre-commit",
+    "commit-msg": "npm run lint-commit"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^16.2.1",
+    "@reallyland/tsconfig": "^4.0.1",
+    "@skypack/package-check": "^0.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-regexp": "^1.6.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0"
+  },
+  "engines": {
+    "node": ">= 16.x",
+    "npm": ">= 8.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
