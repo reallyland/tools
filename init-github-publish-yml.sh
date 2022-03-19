@@ -2,7 +2,7 @@
 
 DIRNAME="$(dirname "$0")"
 CONTENT="$(cat "$DIRNAME/.github/workflows/publish.yml")"
-DEST_DIR="./.github2/workflows"
+DEST_DIR="./.github/workflows"
 
 if [ -z "$DEST" ]; then
   printf "[INFO] %s\n" "Creating $DEST_DIR..."

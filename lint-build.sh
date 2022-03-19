@@ -1,6 +1,7 @@
 #!/bin/sh
 
-CONFIG="./.eslintrc.json"
+DIRNAME=$(dirname "$0")
+CONFIG="$DIRNAME/.eslintrc.json"
 DEBUG=false
 FIX=false
 
