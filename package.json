@@ -28,11 +28,18 @@
   "module": "./index.js",
   "typings": "./index.d.ts",
   "files": [
+    ".gitattributes",
+    ".github/**/*.yml",
+    ".gitignore",
+    ".npmrc",
+    "*.eslintrc.json",
     "**/*.d.ts.map",
     "**/*.d.ts",
     "**/*.js.map",
     "**/*.js",
     "**/*.sh",
+    "*tsconfig.json",
+    "postinstall.*",
     "!**/*demo*/**/*.*",
     "!**/*test*/**/*.*"
   ],
