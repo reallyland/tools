@@ -24,7 +24,8 @@ if (CI !== 'true') {
      * a 2-step process: install without saving as dependency then execute it.
      */
     await $`npm i --no-save simple-git-hooks`
-    await $`simple-git-hooks`;
+    await $`rm -rf .git/hooks`
+    await $`simple-git-hooks ./node_modules/@reallyland/tools/.simple-git-hooks.json`;
 
     await $`npm dedupe`;
   }
