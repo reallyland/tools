@@ -1,6 +1,6 @@
 {
   "extends": [
-    "./.vue.eslintrc.json",
+    "./.eslintrc.json",
     "../.build.eslintrc.json"
   ]
 }

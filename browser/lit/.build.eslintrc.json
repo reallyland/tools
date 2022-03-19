@@ -1,6 +1,6 @@
 {
   "extends": [
-    "./.lit.eslintrc.json",
+    "./.eslintrc.json",
     "../.build.eslintrc.json"
   ]
 }
