@@ -1,5 +1,7 @@
 #!/bin/sh
 
-sh ./init-gitattributes.sh
-sh ./init-gitignore.sh
-sh ./init-npmrc.sh
+DIRNAME="$(dirname "$0")"
+
+sh "$DIRNAME"/init-gitattributes.sh
+sh "$DIRNAME"/init-gitignore.sh
+sh "$DIRNAME"/init-npmrc.sh
