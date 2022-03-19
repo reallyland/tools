@@ -38,6 +38,7 @@
     "**/*.eslintrc.json",
     "**/*.js.map",
     "**/*.js",
+    "**/*.nano-staged.json",
     "**/*.sh",
     "**/*tsconfig.json",
     "postinstall.*",
@@ -46,7 +47,7 @@
   ],
   "scripts": {
     "postinstall": "sh postinstall.sh",
-    "lint-commit": "npm x -y -- commitlint@latest --edit",
+    "lint-commit": "sh lint-commit.sh",
     "pre-commit": "package-check && tsc --noEmit"
   },
   "simple-git-hooks": {
@@ -69,6 +70,7 @@
     "eslint": "^8.11.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-regexp": "^1.6.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0"
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "nano-staged": "^0.6.0"
   }
 }
