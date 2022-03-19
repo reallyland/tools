@@ -3,4 +3,4 @@
 DIRNAME="$(dirname "$0")"
 CONTENT="$(cat "$DIRNAME/.npmrc")"
 
-printf "%s" "$CONTENT" > ./.npmrc
+printf "%s\n" "$CONTENT" > ./.npmrc

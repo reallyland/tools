@@ -14,6 +14,6 @@ DEST_FILE="$DEST_DIR/publish.yml"
 
 printf "[INFO] %s\n" "Creating $DEST_FILE..."
 
-printf "%s" "$CONTENT" > "$DEST_FILE"
+printf "%s\n" "$CONTENT" > "$DEST_FILE"
 
 printf "[INFO] %s\n" "Done."

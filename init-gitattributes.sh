@@ -3,4 +3,4 @@
 DIRNAME="$(dirname "$0")"
 CONTENT="$(cat "$DIRNAME/.gitattributes")"
 
-printf "%s" "$CONTENT" > ./.gitattributes
+printf "%s\n" "$CONTENT" > ./.gitattributes

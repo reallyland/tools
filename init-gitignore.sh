@@ -1,6 +1,12 @@
 #!/bin/sh
 
 DIRNAME="$(dirname "$0")"
-CONTENT="$(cat "$DIRNAME/.gitignore")"
+IGNORE_FILE=".npmignore"
 
-printf "%s" "$CONTENT" > ./.gitignore
+if [ -f "$DIRNAME/.gitignore" ]; then
+  IGNORE_FILE=".gitignore"
+fi
+
+CONTENT="$(cat "$DIRNAME/$IGNORE_FILE")"
+
+printf "%s\n" "$CONTENT" > ./.gitignore
