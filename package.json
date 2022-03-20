@@ -28,6 +28,7 @@
   "module": "./index.js",
   "typings": "./index.d.ts",
   "files": [
+    ".editorconfig",
     ".gitattributes",
     ".github/**/*.yml",
     ".gitignore",
