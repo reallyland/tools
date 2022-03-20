@@ -9,12 +9,12 @@ if (CI !== 'true') {
   const {
     name: fullModuleName,
   } = JSON.parse(await fs.readFile('./package.json', { encoding: 'utf-8' }));
-  const [, moduleName] = fullModuleName.split('/', 2);
+  const [, moduleName = fullModuleName] = fullModuleName.split('/', 2);
 
   if (
     ![
       fullModuleName,
-      moduleName
+      moduleName,
     ].some(n => INIT_CWD.endsWith(`node_modules/${n}`)) &&
     INIT_CWD.endsWith(moduleName)
   ) {
