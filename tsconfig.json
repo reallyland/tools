@@ -1,9 +1,38 @@
 {
-  "extends": "@reallyland/tsconfig/tsconfig.json",
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importsNotUsedAsValues": "error",
+    "inlineSources": true,
+    "listEmittedFiles": true,
+    "newLine": "LF",
+    "noErrorTruncation": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "preserveValueImports": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+
+    "lib": [
+      "ESNext"
+    ],
+    "moduleResolution": "Node",
+    "module": "ESNext",
+    "target": "ESNext",
+    "declaration": true,
+    "declarationMap": true,
     "declarationDir": "dist",
+    "importHelpers": true,
     "outDir": "dist",
     "rootDir": "src"
   },
+  "include": ["src/**/*.ts"],
   "exclude": ["dist", "node_modules"]
 }
