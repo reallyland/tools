@@ -23,7 +23,7 @@
 ## Tools available
 
 - ESLint config for `lit`, `vue`, and generic `TypeScript` projects
-- Shell scripts to generate `.gitattributes`, `.gitignore`, and `.npmrc`
+- Shell scripts to generate `.editorconfig`, `.gitattributes`, `.gitignore`, and `.npmrc`
 - Shell scripts used for CI
 - TSConfig
 
