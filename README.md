@@ -25,7 +25,7 @@
 - ESLint config for `lit`, `vue`, and generic `TypeScript` projects
 - Shell scripts to generate `.editorconfig`, `.gitattributes`, `.gitignore`, and `.npmrc`
 - Shell scripts used for CI
-- TSConfig
+- TSConfig (_NOTE: Copied and extended from `@reallyland/tsconfig` as TypeScript failed to resolve `extends` with nested dependencies within `node_modules`_)
 
 ## License
 
