@@ -28,9 +28,6 @@
     "target": "ESNext",
     "declaration": true,
     "declarationMap": true,
-    "declarationDir": "dist",
-    "importHelpers": true,
-    "outDir": "dist",
-    "rootDir": "src"
+    "importHelpers": true
   }
 }
