@@ -1,7 +1,7 @@
 #!/bin/sh
 
 DIRNAME=$(dirname "$0")
-CONFIG="$DIRNAME/.simple-git-hooks.json"
+CONFIG="$DIRNAME/.base.simple-git-hooks.json"
 NPM_BIN=$(npm bin)
 
 # NOTE(motss): This is a workaround for the fact that the `simple-git-hooks` does not support

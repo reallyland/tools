@@ -58,7 +58,6 @@
   },
   "dependencies": {
     "@commitlint/config-conventional": "^16.2.1",
-    "@reallyland/tsconfig": "^4.0.1",
     "@skypack/package-check": "^0.2.2",
     "@typescript-eslint/eslint-plugin": "^5.15.0",
     "@typescript-eslint/parser": "^5.15.0",
