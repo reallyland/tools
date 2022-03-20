@@ -1,8 +1,6 @@
 {
   "extends": [
-    "../.eslintrc.json"
-  ],
-  "rules": {
-    "no-debugger": "error"
-  }
+    "../.eslintrc.json",
+    "../.base-build.eslintrc.json"
+  ]
 }
