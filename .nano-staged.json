@@ -1,6 +1,6 @@
 {
   "*.ts": [
-    "sh ./node_modules/@reallyland/tools/lint-build.sh -f 1",
+    "sh $(npm root)/@reallyland/tools/lint-build.sh -f 1",
     "git add"
   ]
 }

@@ -1,5 +1,8 @@
 #!/bin/sh
 
-./node_modules/.bin/package-check && \
-./node_modules/.bin/nano-staged --config ./node_modules/@reallyland/tools/.nano-staged.json && \
-./node_modules/.bin/tsc --noEmit
+NPM_BIN=$(npm bin)
+NPM_ROOT=$(npm root)
+
+"$NPM_BIN"/package-check && \
+"$NPM_BIN"/nano-staged --config "$NPM_ROOT"/@reallyland/tools/.nano-staged.json && \
+"$NPM_BIN"/tsc --noEmit

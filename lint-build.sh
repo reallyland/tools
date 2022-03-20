@@ -4,6 +4,7 @@ DIRNAME=$(dirname "$0")
 CONFIG="$DIRNAME/.eslintrc.json"
 DEBUG=false
 FIX=false
+NPM_BIN=$(npm bin);
 
 while getopts "c:d:f:" flag
 do
@@ -27,7 +28,7 @@ if [ "$DEBUG" = true ]; then
 fi
 
 if [ "$FIX" = true ]; then
-  ./node_modules/.bin/eslint src/**/*.ts --ext .js,.jsx,.ts,.tsx --config "$CONFIG" --fix
+  "$NPM_BIN"/eslint src/**/*.ts --ext .js,.jsx,.ts,.tsx --config "$CONFIG" --fix
 else
-  ./node_modules/.bin/eslint src/**/*.ts --ext .js,.jsx,.ts,.tsx --config "$CONFIG"
+  "$NPM_BIN"/eslint src/**/*.ts --ext .js,.jsx,.ts,.tsx --config "$CONFIG"
 fi

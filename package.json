@@ -56,13 +56,6 @@
     "pre-commit": "npm run pre-commit",
     "commit-msg": "npm run lint-commit"
   },
-  "engines": {
-    "node": ">= 16.x",
-    "npm": ">= 8.x"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "@commitlint/config-conventional": "^16.2.1",
     "@reallyland/tsconfig": "^4.0.1",
@@ -75,5 +68,12 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "nano-staged": "^0.6.0",
     "typescript": "^4.6.2"
+  },
+  "engines": {
+    "node": ">= 16.x",
+    "npm": ">= 8.x"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
