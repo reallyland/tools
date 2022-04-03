@@ -2,6 +2,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
     "plugin:promise/recommended",
     "plugin:regexp/recommended"
   ],
@@ -67,6 +68,12 @@
         "allowSingleExtends": true
       }
     ],
+    "import/newline-after-import": ["error", { "count": 1 }],
+    "import/no-anonymous-default-export": "error",
+    "import/no-default-export": "error",
+    "import/no-duplicates": ["error", { "considerQueryString": true }],
+    "import/no-named-default": "error",
+    "import/no-unresolved": "off",
     "semi": "off",
     "@typescript-eslint/semi": ["error", "always"],
     "no-multiple-empty-lines": ["error", {
