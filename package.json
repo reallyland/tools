@@ -56,7 +56,7 @@
     "pre-commit": "npm run pre-commit",
     "commit-msg": "npm run lint-commit"
   },
-  "dependencies": {
+  "optionalDependencies": {
     "@commitlint/config-conventional": "^17.0.0",
     "@skypack/package-check": "^0.2.2",
     "@typescript-eslint/eslint-plugin": "^5.25.0",
