@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "./.eslintrc.json",
+    "../../.base-build.eslintrc.json"
+  ]
+}
