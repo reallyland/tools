@@ -1,0 +1,62 @@
+{
+  "name": "@reallyland/changesets-changelog",
+  "version": "0.0.0",
+  "description": "Opinionated changelog entry generator for changesets that links to commits, PRs and users",
+  "keywords": [
+    "changelog-entry-generator",
+    "changelog-generator",
+    "changelog",
+    "changesets",
+    "really",
+    "reallyland"
+  ],
+  "homepage": "https://github.com/reallyland/tools/src/chagneset-changelog",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:reallyland/tools.git"
+  },
+  "funding": "https://github.com/motss/lit-ntml?sponsor=1",
+  "license": "MIT",
+  "author": {
+    "name": "Rong Sen Ng (motss)",
+    "email": "wes.ngrongsen@gmail.com",
+    "url": "https://github.com/motss"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "default": "./index.js"
+    },
+    "./changesets-changelog": {
+      "types": "./types.d.ts",
+      "import": "./changesets-changelog.js",
+      "default": "./changesets-changelog.js"
+    },
+    "./dist/*": "./dist/*"
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "files": [
+    "dist/*.*js.map",
+    "dist/*.*js",
+    "dist/*.d.ts.map",
+    "dist/*.d.ts",
+    "!**/*bench*/**/*.*",
+    "!**/*mock*/**/*.*",
+    "!**/*test*/**/*.*"
+  ],
+  "dependencies": {
+    "@changesets/get-github-info": "^0.5.1",
+    "@changesets/types": "^5.2.0"
+  },
+  "engines": {
+    "node": ">= 16.x",
+    "npm": ">= 8.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

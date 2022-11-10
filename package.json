@@ -3,6 +3,11 @@
   "version": "0.2.0",
   "description": "A collection of opinionated tools for the Reallyland projects",
   "keywords": [
+    "changelog",
+    "changeset-changelog",
+    "changeset",
+    "changesets-changelog",
+    "changesets",
     "really",
     "reallyland",
     "shell",
@@ -14,6 +19,7 @@
     "type": "git",
     "url": "git@github.com:reallyland/tools.git"
   },
+  "funding": "https://github.com/motss/lit-ntml?sponsor=1",
   "license": "MIT",
   "author": {
     "name": "Rong Sen Ng (motss)",
@@ -22,7 +28,14 @@
   },
   "type": "module",
   "exports": {
-    ".": "./index.js"
+    ".": "./index.js",
+    "./changesets-changelog": {
+      "types": "./changesets-changelog/types.d.ts",
+      "import": "./changesets-changelog/changesets-changelog.js",
+      "default": "./changesets-changelog/changesets-changelog.js"
+    },
+    "./changesets-changelog/*": "./changesets-changelog/*",
+    "./dist/*": "./dist/*"
   },
   "main": "./index.js",
   "module": "./index.js",
@@ -44,26 +57,48 @@
     "**/*.simple-git-hooks.json",
     "**/*tsconfig.json",
     "postinstall.*",
+    "!**/*bench*/**/*.*",
     "!**/*demo*/**/*.*",
-    "!**/*test*/**/*.*"
+    "!**/*mock*/**/*.*",
+    "!**/node_modules/**/*.*",
+    "!**/*test*/**/*.*",
+    "!tsconfig.json"
   ],
   "scripts": {
-    "postinstall": "sh postinstall.sh",
-    "lint-commit": "sh lint-commit.sh",
-    "pre-commit": "package-check && tsc --noEmit"
+    "bench": "vitest bench",
+    "build": "npm run clean && tsc",
+    "clean": "sh ./cleanup.sh",
+    "postinstall": "sh ./postinstall.sh",
+    "lint": "sh ./lint-build.sh -c ./.eslintrc.json -s 'src/**/*.ts'",
+    "lint-commit": "sh ./lint-commit.sh",
+    "lint:build": "sh ./lint-build.sh -c ./browser/.build.eslintrc.json",
+    "pre-commit": "package-check && nano-staged --config ./.nano-staged.json && tsc --noEmit",
+    "prepublishOnly": "npm run lint:build && npm run build",
+    "release": "npm run prepublishOnly && changeset publish",
+    "test": "vitest --coverage",
+    "version": "changeset version"
   },
   "simple-git-hooks": {
     "pre-commit": "npm run pre-commit",
     "commit-msg": "npm run lint-commit"
   },
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.25.1",
+    "eslint-plugin-regexp": "^1.10.0",
+    "vitest": "^0.25.1"
+  },
   "optionalDependencies": {
+    "@changesets/cli": "^2.25.2",
     "@commitlint/config-conventional": "^17.2.0",
     "@skypack/package-check": "^0.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": "^8.28.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-regexp": "^1.9.0",
     "eslint-plugin-simple-import-sort": "^8.0.0",
-    "nano-staged": "^0.8.0"
+    "nano-staged": "^0.8.0",
+    "typescript": "^4.9.3"
   },
   "engines": {
     "node": ">= 16.x",
@@ -72,10 +107,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.43.0",
-    "@typescript-eslint/parser": "^5.43.0",
-    "eslint": "^8.28.0",
-    "typescript": "^4.9.3"
+  "nano-staged": {
+    "*.ts": [
+      "npm run lint:build -- -f 1",
+      "git add"
+    ]
   }
 }

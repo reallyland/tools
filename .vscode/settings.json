@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": false,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.tsdk": "node_modules/typescript/lib",
+}
