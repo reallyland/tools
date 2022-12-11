@@ -4,5 +4,5 @@
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.importModuleSpecifierEnding": "js",
   "typescript.preferences.quoteStyle": "single",
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

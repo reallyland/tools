@@ -7,7 +7,7 @@ export default defineConfig({
     clearMocks: true,
     coverage: {
       reporter: ['lcov', 'text'],
-      exclude: ['**/tests/**'],
+      exclude: ['**/{benchmarks,mocks,tests}/**'],
     },
   },
 })

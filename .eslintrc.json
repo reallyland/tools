@@ -12,7 +12,8 @@
   "ignorePatterns": [
     "_template.*",
     "*.config.ts",
-    "**/*.mjs"
+    "**/*.mjs",
+    "**/dist/**/*.js"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -56,11 +57,11 @@
         "fixMixedExportsWithInlineTypeSpecifier": true
       }
     ],
-    "import/consistent-type-specifier-style": ["error", "prefer-inline"],
     "@typescript-eslint/consistent-type-imports": [
       "error", {
         "prefer": "type-imports",
-        "disallowTypeAnnotations": false
+        "disallowTypeAnnotations": false,
+        "fixStyle": "inline-type-imports"
       }
     ],
     "@typescript-eslint/no-empty-interface": [

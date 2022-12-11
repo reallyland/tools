@@ -34,7 +34,6 @@
 <!-- [MIT License](https://motss.mit-license.org/) © Rong Sen Ng (motss) -->
 
 <!-- Links -->
-[home.ts]: /src/home.ts
 [sitemap.xml]: /assets/sitemap.xml
 
 <!-- References -->

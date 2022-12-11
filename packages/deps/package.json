@@ -1,0 +1,13 @@
+{
+  "name": "@reallyland/deps",
+  "version": "0.0.0",
+  "description": "Core package.json to be used by all packages in a monorepo",
+  "license": "MIT",
+  "author": "",
+  "scripts": {},
+  "devDependencies": {
+    "@reallyland/tools": "*",
+    "@vitest/coverage-c8": "^0.25.7",
+    "vitest": "^0.25.7"
+  }
+}

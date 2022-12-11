@@ -49,8 +49,11 @@
     "!**/*test*/**/*.*"
   ],
   "dependencies": {
-    "@changesets/get-github-info": "^0.5.1",
-    "@changesets/types": "^5.2.0"
+    "@changesets/get-github-info": "^0.5.1"
+  },
+  "devDependencies": {
+    "@changesets/types": "^5.2.0",
+    "@reallyland/deps": "*"
   },
   "engines": {
     "node": ">= 16.x",
