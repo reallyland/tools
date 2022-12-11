@@ -1,0 +1,7 @@
+{
+  "exclude": ["vite.config.ts"],
+  "files": [],
+  "references": [
+    { "path": "./packages/changesets-changelog" }
+  ]
+}
