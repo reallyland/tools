@@ -38,17 +38,17 @@
     "@typescript-eslint/comma-dangle": [
       "error", {
         "arrays": "always-multiline",
-        "objects": "always-multiline",
-        "imports": "always-multiline",
         "exports": "always-multiline",
-        "functions": "never"
+        "functions": "never",
+        "imports": "always-multiline",
+        "objects": "always-multiline"
       }
     ],
     "comma-spacing": "off",
     "@typescript-eslint/comma-spacing": [
       "error", {
-        "before": false,
-        "after": true
+        "after": true,
+        "before": false
       }
     ],
     "@typescript-eslint/consistent-type-exports": [
@@ -56,11 +56,11 @@
         "fixMixedExportsWithInlineTypeSpecifier": true
       }
     ],
-    "import/consistent-type-specifier-style": ["error", "prefer-inline"],
     "@typescript-eslint/consistent-type-imports": [
       "error", {
-        "prefer": "type-imports",
-        "disallowTypeAnnotations": false
+        "disallowTypeAnnotations": false,
+        "fixStyle": "inline-type-imports",
+        "prefer": "type-imports"
       }
     ],
     "@typescript-eslint/no-empty-interface": [
