@@ -12,7 +12,8 @@
   "ignorePatterns": [
     "_template.*",
     "*.config.ts",
-    "**/*.mjs"
+    "**/*.mjs",
+    "**/dist/**/*.js"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
