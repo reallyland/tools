@@ -71,10 +71,11 @@
         "allowSingleExtends": true
       }
     ],
-    "import/newline-after-import": ["error", { "count": 1 }],
+    "@typescript-eslint/no-import-type-side-effects": "error",
+    "import/newline-after-import": ["error", { "considerComments": true, "count": 1 }],
     "import/no-anonymous-default-export": "error",
     "import/no-default-export": "error",
-    "import/no-duplicates": ["error", { "considerQueryString": true }],
+    "import/no-duplicates": ["error", { "considerQueryString": true, "prefer-inline": true }],
     "import/no-named-default": "error",
     "import/no-unresolved": "off",
     "semi": "off",

@@ -4,7 +4,6 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "importsNotUsedAsValues": "error",
     "inlineSources": true,
     "listEmittedFiles": true,
     "newLine": "LF",
@@ -14,11 +13,11 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "preserveValueImports": true,
     "removeComments": true,
     "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,
+    "verbatimModuleSyntax": true,
 
     "lib": [
       "ESNext",
