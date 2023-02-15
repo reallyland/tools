@@ -2,5 +2,9 @@
   "*.ts": [
     "npm run lint:build -- -f 1",
     "git add"
+  ],
+  "package.json": [
+    "npm x -- sort-package-json",
+    "git add"
   ]
 }
