@@ -71,7 +71,7 @@
         "allowSingleExtends": true
       }
     ],
-    "import/newline-after-import": ["error", { "considerComments": true, "count": 1 }],
+    "import/newline-after-import": ["error", { "considerComments": false, "count": 1 }],
     "import/no-anonymous-default-export": "error",
     "import/no-default-export": "error",
     "import/no-duplicates": ["error", { "considerQueryString": true, "prefer-inline": true }],
