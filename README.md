@@ -17,8 +17,8 @@
 
 ## Pre-requisites
 
-- [Node.js][nodejs-url] >= 16.x
-- [NPM][npm-url] >= 8.x ([NPM][npm-url] comes with [Node.js][nodejs-url], no separate installation is required.)
+- [Node.js][nodejs-url] >= 18.x
+- [NPM][npm-url] >= 9.x ([NPM][npm-url] comes with [Node.js][nodejs-url], no separate installation is required.)
 
 ## Tools available
 
