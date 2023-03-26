@@ -71,7 +71,6 @@
         "allowSingleExtends": true
       }
     ],
-    "@typescript-eslint/no-import-type-side-effects": "error",
     "import/newline-after-import": ["error", { "considerComments": true, "count": 1 }],
     "import/no-anonymous-default-export": "error",
     "import/no-default-export": "error",
