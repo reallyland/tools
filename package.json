@@ -1,6 +1,6 @@
 {
   "name": "@reallyland/tools",
-  "version": "0.4.2-rc.1",
+  "version": "0.4.2",
   "description": "A collection of opinionated tools for the Reallyland projects",
   "keywords": [
     "really",
