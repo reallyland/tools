@@ -14,6 +14,7 @@
 *.tsbuildinfo
 
 # folders
+.vscode/*
 coverage*/
 dist*/
 log*/
@@ -21,3 +22,5 @@ node_modules/
 web_modules/
 
 # Do not ignore
+!.vscode/extensions.json
+!.vscode/settings.json
