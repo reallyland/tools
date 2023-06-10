@@ -108,7 +108,7 @@
         "maxEOF": 0
       }
     ],
-    "no-duplicate-type-constituents": "error",
+    "@typescript-eslint/no-duplicate-type-constituents": "error",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "promise/no-multiple-resolved": "error"
