@@ -10,7 +10,7 @@ CONFIG="$DIRNAME/.base.simple-git-hooks.json"
 cp "$CONFIG" ./.simple-git-hooks.json
 
 # 2. Run the `simple-git-hooks`
-npm x -- simple-git-hooks
+npm x -y -- simple-git-hooks
 
 # 3. Remove the configuration file from `pwd`
 rm -rf ./.simple-git-hooks.json

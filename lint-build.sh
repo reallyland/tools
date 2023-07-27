@@ -32,7 +32,7 @@ if [ "$DEBUG" = true ]; then
   printf "[DEBUG] FIX: %s\n" "$FIX"
   printf "[DEBUG] SRC: %s\n" "$SRC"
 elif [ "$FIX" = true ]; then
-  npm x -- eslint "${SRC:-src/**/*.ts}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG" --fix
+  npm x -y -- eslint "${SRC:-src/**/*.ts}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG" --fix
 else
-  npm x -- eslint "${SRC:-src/**/*.ts}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG"
+  npm x -y -- eslint "${SRC:-src/**/*.ts}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG"
 fi

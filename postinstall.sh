@@ -9,5 +9,10 @@ NPM_MAJOR_VERSION=$(npm -v | awk -F . '{print $1}')
 if [ "$NPM_MAJOR_VERSION" -gt 6 ]; then
   npm x -y -- zx@latest "$POSTINSTALL_SCRIPT"
 else
-  npx -y -- zx@latest "$POSTINSTALL_SCRIPT"
+  if [ -f "pnpm-lock.yaml" ]; then
+    rm -rf .git/hooks
+    sh ${__dirname}/simple-git-hooks.sh
+  else
+    npx -y -- zx@latest "$POSTINSTALL_SCRIPT"
+  fi
 fi
