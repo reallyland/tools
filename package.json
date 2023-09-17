@@ -57,6 +57,7 @@
     "commit-msg": "npm run lint-commit"
   },
   "optionalDependencies": {
+    "@biomejs/biome": "^1.2.2",
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.1",
     "@commitlint/config-conventional": "^17.7.0",

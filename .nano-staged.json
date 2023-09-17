@@ -1,6 +1,6 @@
 {
-  "*.ts": [
-    "npm run lint:build -- -f 1",
+  "*.{ts,tsx}": [
+    "npm run lint-build -- -f 1",
     "git add"
   ],
   "package.json": [

@@ -1,4 +1,0 @@
-{
-  "commit-msg": "npm run lint-commit",
-  "pre-commit": "npm run pre-commit"
-}
