@@ -30,8 +30,6 @@ done
 
 if [ "$debug" = true ]; then
   printf "[DBEUG] Flag values:-\nc: %s\nn: %s\np: %s\nt: %s\n" "$nanoStagedConfig" "$nanoStaged" "$packageCheck" "$typeCheck"
-else
-  printf "[INFO] pre-commit done!\n"
 fi
 
 if [ "$packageCheck" = true ]; then
@@ -45,3 +43,5 @@ fi
 if [ "$nanoStaged" = true ]; then
   npm x -y --package=nano-staged@latest -- nano-staged --config "$nanoStagedConfig"
 fi
+
+printf "[INFO] pre-commit done!\n"
