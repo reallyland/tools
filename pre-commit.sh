@@ -41,7 +41,11 @@ if [ "$typeCheck" = true ]; then
 fi
 
 if [ "$nanoStaged" = true ]; then
-  npm x -y --package=nano-staged@latest -- nano-staged --config "$nanoStagedConfig"
+  if [ -f "$(npm root)/.bin/nano-staged" ]; then
+    pnpm nano-staged --config "$nanoStagedConfig"
+  else
+    npm x -y --package=nano-staged@latest -- nano-staged --config "$nanoStagedConfig"
+  fi
 fi
 
 printf "[INFO] pre-commit done!\n"

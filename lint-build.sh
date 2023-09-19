@@ -33,7 +33,7 @@ if [ "$DEBUG" = true ]; then
 fi
 
 if [ "$FIX" = true ]; then
-  npm x -y --package=eslint@latest -- eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG" --fix
+  pnpm eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG" --fix
 else
-  npm x -y --package=eslint@latest -- eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG"
+  pnpm eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG"
 fi

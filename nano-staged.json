@@ -1,7 +1,10 @@
 {
   "*.{js,jsx,ts,tsx}": [
-    "npm x -y --package=@biomejs/biome@latest -- biome format --write",
-    "npm x -y --package=eslint@latest -- eslint --ext .js,.jsx,.ts,.tsx --config node_modules/@reallyland/tools/.build.eslintrc.json --fix"
+    "npm run fmt",
+    "npm run lint-build"
+  ],
+  "*.{json}": [
+    "npm run fmt"
   ],
   "package.json": [
     "npm x -y --package=sort-package-json@latest -- sort-package-json"

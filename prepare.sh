@@ -2,4 +2,8 @@
 
 [ -n "$CI" ] && exit 0;
 
-npm x -y --package=husky@latest -- husky install
+if [ -f "$(npm root)/.bin/husky" ]; then
+  husky install
+else
+  npm x -y --package=husky@latest -- husky install
+fi

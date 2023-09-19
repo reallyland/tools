@@ -2,25 +2,21 @@
 
 DIRNAME=$(dirname "$0")
 
-# CONFIG="$DIRNAME/.base.nano-staged.json"
 PREPARE_SH="prepare.sh"
-# NANO_STAGED_JSON="nano-staged.json"
 
-# printf "[INFO] Setting up nano-staged & husky...\n"
+printf "[INFO] Installing required dependencies...\n"
+pnpm add -Dw @biomejs/biome eslint husky nano-staged
+
 printf "[INFO] Setting up husky...\n"
-
-# printf "[INFO] Adding %s...\n" "$NANO_STAGED_JSON"
-# cp "$CONFIG" "./$NANO_STAGED_JSON"
-
-printf "[INFO] Installing husky...\n"
 sh "$DIRNAME/$PREPARE_SH"
 
-printf "[INFO] Adding husky hooks...\n"
-npm x -y --package=husky@latest -- husky add .husky/commit-msg "sh \$(npm root)/@reallyland/tools/lint-commit.sh"
-npm x -y --package=husky@latest -- husky add .husky/pre-commit "sh \$(npm root)/@reallyland/tools/pre-commit.sh -n -p -t"
+printf "[INFO] Setting up husky hooks...\n"
+pnpm husky set .husky/commit-msg "sh \$(npm root)/@reallyland/tools/lint-commit.sh"
+pnpm husky set .husky/pre-commit "sh \$(npm root)/@reallyland/tools/pre-commit.sh -n -p -t"
 
 printf "[INFO] Adding scripts.prepare to root workspace...\n"
+npm pkg set scripts.fmt="pnpm biome format --write"
+npm pkg set scripts.lint-build="pnpm eslint --ext .js,.jsx,.ts,.tsx --config \$(npm root)/@reallyland/tools/.build.eslintrc.json --fix"
 npm pkg set scripts.prepare="sh \$(npm root)/@reallyland/tools/$PREPARE_SH"
 
-# printf "[INFO] nano-staged & husky is ready!\n"
 printf "[INFO] husky is ready!\n"
