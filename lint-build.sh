@@ -33,9 +33,7 @@ if [ "$DEBUG" = true ]; then
 fi
 
 if [ "$FIX" = true ]; then
-  printf "TEST\n";
   npm x -y --package=eslint@latest -- eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG" --fix
 else
-  printf "TEST2\n";
   npm x -y --package=eslint@latest -- eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG"
 fi
