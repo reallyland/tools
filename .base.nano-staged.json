@@ -1,11 +1,11 @@
 {
   "*.{js,jsx,ts,tsx}": [
-    "pnpm eslint --ext .js,.jsx,.ts,.tsx --config node_modules/@reallyland/tools/.build.eslintrc.json --fix",
-    "pnpm biome format --write --verbose",
+    "pnpm --package=eslint@latest dlx eslint --ext .js,.jsx,.ts,.tsx --config node_modules/@reallyland/tools/.build.eslintrc.json --fix",
+    "pnpm --package=@biomejs/biome@latest dlx biome format --write --verbose",
     "git add"
   ],
   "package.json": [
-    "npm x -y --package=sort-package-json@latest -- sort-package-json",
+    "pnpm --package=sort-package-json@latest dlx sort-package-json",
     "git add"
   ]
 }

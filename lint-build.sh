@@ -26,14 +26,14 @@ usage: $0
 done
 
 if [ "$DEBUG" = true ]; then
-  "$NPM_BIN"/eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG" --debug --fix-dry-run
+  pnpm --package=eslint@latest dlx eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG" --debug --fix-dry-run
 
   printf "\n"
   printf "[DEBUG] CONFIG: %s\n" "$CONFIG"
   printf "[DEBUG] FIX: %s\n" "$FIX"
   printf "[DEBUG] SRC: %s\n" "$SRC"
 elif [ "$FIX" = true ]; then
-  npm x -y -- eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG" --fix
+  pnpm --package=eslint@latest dlx eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG" --fix
 else
-  npm x -y -- eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG"
+  pnpm --package=eslint@latest dlx eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG"
 fi
