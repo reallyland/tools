@@ -28,24 +28,19 @@
   "module": "./index.js",
   "typings": "./index.d.ts",
   "files": [
+    "!**/*demo*/**/*.*",
+    "!**/*test*/**/*.*",
     ".editorconfig",
     ".gitattributes",
     ".github/**/*.yml",
     ".gitignore",
     ".npmrc",
-    "**/*.commitlintrc.json",
     "**/*.d.ts.map",
     "**/*.d.ts",
-    "**/*.eslintrc.json",
     "**/*.js.map",
     "**/*.js",
-    "**/*.nano-staged.json",
-    "**/*.sh",
-    "**/*.simple-git-hooks.json",
-    "**/*tsconfig.json",
-    "postinstall.*",
-    "!**/*demo*/**/*.*",
-    "!**/*test*/**/*.*"
+    "**/*.json",
+    "**/*.sh"
   ],
   "scripts": {
     "lint-commit": "sh lint-commit.sh",
