@@ -48,7 +48,6 @@
     "!**/*test*/**/*.*"
   ],
   "scripts": {
-    "postinstall": "sh postinstall.sh",
     "lint-commit": "sh lint-commit.sh",
     "pre-commit": "package-check && tsc --noEmit"
   },
