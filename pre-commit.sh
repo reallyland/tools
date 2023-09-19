@@ -29,7 +29,7 @@ usage: $0
 done
 
 if [ "$debug" = true ]; then
-  printf "[DBEUG] Flag values:-\nc: %s\nn: %s\np: %s\nt: %s\n" "$nanoStagedConfig" "$nanoStaged" "$packageCheck" "$typeCheck"
+  printf "[DEBUG] Flag values:-\nc: %s\nn: %s\np: %s\nt: %s\n" "$nanoStagedConfig" "$nanoStaged" "$packageCheck" "$typeCheck"
 fi
 
 if [ "$packageCheck" = true ]; then
