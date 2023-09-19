@@ -1,0 +1,11 @@
+{
+  "*.{js,jsx,ts,tsx}": [
+    "pnpm eslint --ext .js,.jsx,.ts,.tsx --config node_modules/@reallyland/tools/.build.eslintrc.json --fix",
+    "pnpm biome format --write --verbose",
+    "git add"
+  ],
+  "package.json": [
+    "npm x -y --package=sort-package-json@latest -- sort-package-json",
+    "git add"
+  ]
+}
