@@ -35,7 +35,7 @@ else
 fi
 
 if [ "$packageCheck" = true ]; then
-  pnpm --package=@skypack/package-check@latest dlx package-check
+  npm x -y --package=@skypack/package-check@latest -- package-check
 fi
 
 if [ "$typeCheck" = true ]; then
@@ -43,5 +43,5 @@ if [ "$typeCheck" = true ]; then
 fi
 
 if [ "$nanoStaged" = true ]; then
-  pnpm --package=nano-staged@latest dlx nano-staged --config "$nanoStagedConfig"
+  npm x -y --package=nano-staged@latest -- nano-staged --config "$nanoStagedConfig"
 fi

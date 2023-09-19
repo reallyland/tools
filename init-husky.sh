@@ -16,8 +16,8 @@ printf "[INFO] Installing husky...\n"
 sh "$DIRNAME/$PREPARE_SH"
 
 printf "[INFO] Adding husky hooks...\n"
-pnpm --package=husky@latest dlx husky add .husky/commit-msg "sh \$(npm root)/@reallyland/tools/lint-commit.sh"
-pnpm --package=husky@latest dlx husky add .husky/pre-commit "sh \$(npm root)/@reallyland/tools/pre-commit.sh -n -p -t"
+npm x -y --package=husky@latest -- husky add .husky/commit-msg "sh \$(npm root)/@reallyland/tools/lint-commit.sh"
+npm x -y --package=husky@latest -- husky add .husky/pre-commit "sh \$(npm root)/@reallyland/tools/pre-commit.sh -n -p -t"
 
 printf "[INFO] Adding scripts.prepare to root workspace...\n"
 npm pkg set scripts.prepare="sh \$(npm root)/@reallyland/tools/$PREPARE_SH"

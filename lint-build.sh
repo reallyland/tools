@@ -34,8 +34,8 @@ fi
 
 if [ "$FIX" = true ]; then
   printf "TEST\n";
-  pnpm --package=eslint@latest dlx eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG" --fix
+  npm x -y --package=eslint@latest -- eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG" --fix
 else
   printf "TEST2\n";
-  pnpm --package=eslint@latest dlx eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG"
+  npm x -y --package=eslint@latest -- eslint "${SRC:-$DEFAULT_SRC}" --ext .js,.jsx,.ts,.tsx --config "$CONFIG"
 fi

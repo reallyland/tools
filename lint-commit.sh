@@ -24,4 +24,4 @@ if [ "$DEBUG" = true ]; then
   printf "[DEBUG] CONFIG: %s\n" "$CONFIG"
 fi
 
-pnpm --package=commitlint@latest dlx commitlint --config "$CONFIG" --edit
+npm x -y --package=commitlint@latest -- commitlint --config "$CONFIG" --edit

@@ -2,4 +2,4 @@
 
 [ -n "$CI" ] && exit 0;
 
-pnpm --package=husky@latest dlx husky install
+npm x -y --package=husky@latest -- husky install
