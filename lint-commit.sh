@@ -4,7 +4,7 @@ DIRNAME=$(dirname "$0")
 CONFIG="$DIRNAME/.commitlintrc.json"
 DEBUG=false
 
-while getopts "c:d:" flag
+while getopts "c:d" flag
 do
   case "$flag" in
     c) CONFIG=${OPTARG} ;;
@@ -13,6 +13,7 @@ do
 usage: $0
 
 [-c] Path to ESLint config file
+
 [-d] Print debug messages
 " >&2
        exit 1 ;;
@@ -23,4 +24,4 @@ if [ "$DEBUG" = true ]; then
   printf "[DEBUG] CONFIG: %s\n" "$CONFIG"
 fi
 
-npm x -y -- commitlint@latest --config "$CONFIG" --edit
+pnpm --package=commitlint@latest dlx commitlint --config "$CONFIG" --edit
