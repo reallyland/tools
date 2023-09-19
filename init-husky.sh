@@ -1,22 +1,24 @@
 #!/bin/sh
 
 DIRNAME=$(dirname "$0")
+
 CONFIG="$DIRNAME/.base.nano-staged.json"
+PREPARE_SH="prepare.sh"
+NANO_STAGED_JSON="nano-staged.json"
 
-printf "[INFO] Setting up husky & nano-staged...\n"
+printf "[INFO] Setting up nano-staged & husky...\n"
 
-printf "[INFO] Running husky-init...\n"
-pnpm dlx husky-init && pnpm install
-
-printf "[INFO] Adding nano-staged.json...\n"
-cp "$CONFIG" ./nano-staged.json
-
-printf "[INFO] Adding scripts.{commit-msg,pre-commit,prepare} to root workspace...\n"
-npm pkg set scripts.commit-msg="sh $(npm root)/@reallyland/tools/lint-commit.sh"
-npm pkg set scripts.pre-commit="pnpm nano-staged --config ./.nano-staged.json"
-npm pkg set scripts.prepare="sh $(npm root)/@reallyland/tools/prepare.sh"
+printf "[INFO] Adding %s...\n" "$NANO_STAGED_JSON"
+cp "$CONFIG" "./$NANO_STAGED_JSON"
 
 printf "[INFO] Installing husky...\n"
-pnpm prepare
+sh "$DIRNAME/$PREPARE_SH"
 
-printf "[INFO] husky & nano-staged is ready!\n"
+printf "[INFO] Adding husky hooks...\n"
+pnpm --package=husky@latest dlx husky add .husky/commit-msg "sh \$(npm root)/@reallyland/tools/lint-commit.sh"
+pnpm --package=husky@latest dlx husky add .husky/pre-commit "pnpm --package=nano-staged@latest dlx nano-staged --config ./$NANO_STAGED_JSON"
+
+printf "[INFO] Adding scripts.prepare to root workspace...\n"
+npm pkg set scripts.prepare="sh \$(npm root)/@reallyland/tools/$PREPARE_SH"
+
+printf "[INFO] nano-staged & husky is ready!\n"
