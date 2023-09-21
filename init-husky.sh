@@ -14,9 +14,9 @@ sh "$DIRNAME/$PREPARE_SH"
 printf "[INFO] Setting up husky hooks...\n"
 pnpm husky set .husky/commit-msg "sh \$(npm root)/@reallyland/tools/lint-commit.sh"
 pnpm husky set .husky/pre-commit "\
-package-check && \\
-tsc --noEmit && \\
-nano-staged --config \$(npm root)/@reallyland/tools/nano-staged.json\
+pnpm package-check && \\
+pnpm tsc --noEmit && \\
+pnpm nano-staged --config \$(npm root)/@reallyland/tools/nano-staged.json\
 "
 
 printf "[INFO] Adding scripts.prepare to root workspace...\n"
