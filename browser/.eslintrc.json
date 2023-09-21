@@ -3,7 +3,5 @@
     "browser": true,
     "serviceworker": true
   },
-  "extends": [
-    "../.eslintrc.json"
-  ]
+  "extends": ["../.eslintrc.json"]
 }

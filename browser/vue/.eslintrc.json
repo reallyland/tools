@@ -14,7 +14,8 @@
   },
   "rules": {
     "@typescript-eslint/consistent-type-imports": [
-      "error", {
+      "error",
+      {
         "disallowTypeAnnotations": false,
         "fixStyle": "separate-type-imports",
         "prefer": "type-imports"

@@ -1,11 +1,6 @@
 {
-  "*.{js,jsx,ts,tsx}": [
-    "npm run fmt",
-    "npm run lint-build"
-  ],
-  "*.{json}": [
-    "npm run fmt"
-  ],
+  "*.{js,jsx,ts,tsx}": ["npm run fmt", "npm run lint-build"],
+  "*.{json}": ["npm run fmt"],
   "package.json": [
     "npm x -y --package=sort-package-json@latest -- sort-package-json"
   ]

@@ -24,10 +24,7 @@
     "project": "./tsconfig.json",
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "simple-import-sort"
-  ],
+  "plugins": ["@typescript-eslint", "simple-import-sort"],
   "rules": {
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
@@ -112,10 +109,7 @@
     "perfectionist/sort-named-imports": "off",
     "promise/no-multiple-resolved": "error",
     "semi": "off",
-    "@typescript-eslint/semi": [
-      "error",
-      "always"
-    ],
+    "@typescript-eslint/semi": ["error", "always"],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error"
   }
