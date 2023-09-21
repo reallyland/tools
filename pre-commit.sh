@@ -33,16 +33,20 @@ if [ "$debug" = true ]; then
 fi
 
 if [ "$packageCheck" = true ]; then
-  npm x -y --package=@skypack/package-check@latest -- package-check
+  if [ -f "$(npm root)/.bin/package-check" ]; then
+    package-check
+  else
+    npm x -y --package=@skypack/package-check@latest -- package-check
+  fi
 fi
 
 if [ "$typeCheck" = true ]; then
-  pnpm tsc --noEmit
+  tsc --noEmit
 fi
 
 if [ "$nanoStaged" = true ]; then
   if [ -f "$(npm root)/.bin/nano-staged" ]; then
-    pnpm nano-staged --config "$nanoStagedConfig"
+    nano-staged --config "$nanoStagedConfig"
   else
     npm x -y --package=nano-staged@latest -- nano-staged --config "$nanoStagedConfig"
   fi
