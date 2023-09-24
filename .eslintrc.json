@@ -12,12 +12,7 @@
   "globals": {
     "globalThis": true
   },
-  "ignorePatterns": [
-    "_template.*",
-    "*.config.ts",
-    "**/*.mjs",
-    "**/dist/**/*.js"
-  ],
+  "ignorePatterns": ["dist", "lib-types", "lib", "tmp"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2021,
